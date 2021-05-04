@@ -1,0 +1,186 @@
+.colorcolumn{
+    margin-top:2px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border:3px inset grey;
+    box-sizing: content-box;
+    height:195px;
+    align-items: left;
+    width:93px;
+    z-index:99;
+}
+
+#colorshow{
+    margin-top:5px;
+    width:94px;
+    height:15px;
+    border:3px inset grey;
+    box-sizing: content-box;
+}
+
+.colorsquare{
+    width:31.3px;
+    height:15px;
+    margin:none;
+    border:none;
+    z-index:99;
+}
+
+
+
+/* column 1 */
+
+#black{
+    background-color: #000000;
+}
+
+#white{
+    background-color: #313231;
+}
+
+#red{
+    background-color: #DF2B2B;
+}
+
+#green{
+    background-color: #3EDF2B;
+}
+
+#blue{
+    background-color: #2B32DF;
+}
+
+#purple{
+    background-color: #6B1068;
+}
+
+#yellow{
+    background-color: #EDFF00;
+}
+
+#lightblue{
+    background-color: #00C9DF;
+}
+
+#orange{
+    background-color: #DF8D00;
+}
+#brown{
+    background-color: #836126;
+}
+
+#grey{
+    background-color: #9B9B9B;
+}
+#pink{
+    background-color: #FFA2D0;
+}
+
+
+/* column 2 */
+
+
+#black2{
+    background-color: #393939;
+}
+
+#white2{
+    background-color: #B1AFB2;
+}
+
+#red2{
+    background-color: #FD554D;
+}
+
+#green2{
+    background-color: #74FF4B;
+}
+
+#blue2{
+    background-color: #6875FE;
+}
+
+#purple2{
+    background-color: #B166DE;
+}
+
+#yellow2{
+    background-color: #FDFF5D;
+}
+
+#lightblue2{
+    background-color: #76F4FD;
+}
+
+#orange2{
+    background-color: #FFD92A;
+}
+#brown2{
+    background-color: #85762F;
+}
+
+#grey2{
+    background-color: #ABABAA;
+}
+#pink2{
+    background-color: #FFA5F9;
+}
+
+
+/* column 3  */
+
+
+#black3{
+    background-color: #4A494A;
+}
+
+#white3{
+    background-color: #FFFFFF;
+}
+
+#red3{
+    background-color: #FB8D87;
+}
+
+#green3{
+    background-color: #A6FE8C;
+}
+
+#blue3{
+    background-color: #A2A9FA;
+}
+
+#purple3{
+    background-color: #D49AF7;
+}
+
+#yellow3{
+    background-color: #FBFD99;
+}
+
+#lightblue3{
+    background-color: #BCF6FB;
+}
+
+#orange3{
+    background-color: #FFEB90;
+}
+#brown3{
+    background-color: #B2A463;
+}
+#grey3{
+    background-color: #D7D7D5;
+}
+#pink3{
+    background-color: #F9D0F7;
+}
+
+.stamp-panel{
+    display:none;
+}
+
+.stroke-size-panel{
+    display:none;
+}
+

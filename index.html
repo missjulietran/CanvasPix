@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Pix</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./colorbar.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+  <!-- Loading Screen -->
+  <img id="furbygif" src="./assets/furbylogo.gif" alt="furby">
+  <img id="intro-text" src="./assets/Intro-Text.png" alt="text">
+  <audio autoplay>
+    <source
+      src="http://soundfxcenter.com/video-games/super-mario-bros/8d82b5_Super_Mario_Bros_Stage_Clear_Sound_Effect.mp3"
+      type="audio/mpeg" />
+  </audio>
+
+
+
+
+
+  <!-- Navigation bar -->
+  <nav>
+    <ul class="menu">
+      <li class="logo"><a href="#"><img src="assets/furbylogo.gif" width="20"></a>CANVASPIX</li>
+      <li class="item has-submenu">
+        <a tabindex="0">File</a>
+        <ul class="submenu">
+          <li class="subitem"><a href="#"><img src="./assets/icons/new.png" id="new-button">New</a></li>
+          <li class="subitem"><a href="#" download="Canvas.png" id="save-button"><img src="./assets/icons/save.png">Save
+              As</a></li>
+          <li class="subitem"><a href="javascript:if(window.print)window.print()"><img
+                src="./assets/icons/print.png">Print</a></li>
+        </ul>
+      </li>
+      <li class="item has-submenu">
+        <a tabindex="0">Edit</a>
+        <ul class="submenu">
+          <li class="subitem"><a href="#"><img src="./assets/icons/undo.png" id="undo-button">Undo</a></li>
+          <li class="subitem"><a href="#"><img src="./assets/icons/redo.png" id="redo-button">Redo</a></li>
+          <li class="subitem"><a href="#"><img src="./assets/icons/crop.png" id="crop-button">Crop</a></li>
+          <li class="subitem"><a href="#"><img src="./assets/icons/clear.png" id="clear-button">Clear</a></li>
+        </ul>
+      </li>
+      <li class="item">
+        <div id="clock"></div>
+      </li>
+      <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+    </ul>
+  </nav>
+
+
+
+
+
+
+  <!-- Side bar -->
+  <div class="sidebar">
+    <div class="sidebar-inner">
+      <a href="#" title="Pencil Tool" class="sidebar-a"><img src="assets/icons/side-pencil.png"
+          id="draw-line-button"></a>
+      <a href="#" title="Paint Tool" class="sidebar-a"><img src="assets/icons/side-paint.png" id="paint-button"></a>
+      <a href="#" title="Spray Paint Tool" class="sidebar-a"><img src="assets/icons/side-spray.png" id="spray"></a>
+      <a href="#" title="Line Tool" class="sidebar-a"><img src="assets/icons/side-line.png"
+          id="straight-line-button"></a>
+      <a href="#" title="Curve Tool" class="sidebar-a"><img src="assets/icons/side-curve.png" id="curve-button"></a>
+      <a href="#" title="Rectangle Shape" class="sidebar-a"><img src="assets/icons/side-rectangle.png"
+          id="rectangle-button"></a>
+      <a href="#" title="Circle Shape" class="sidebar-a"><img src="assets/icons/side-circle.png" id="circle-button"></a>
+      <a href="#" title="Oval Shape" class="sidebar-a"><img src="assets/icons/side-oval.png" id="oval-button"></a>
+      <a href="#" title="Triangle Shape" class="sidebar-a"><img src="assets/icons/side-triangle.png"
+          id="triangle-button"></a>
+      <a href="#" title="Stamp Tool" class="sidebar-a"><img src="assets/icons/side-stamp.png" id="stamp-button"></a>
+      <a href="#" title="Text" class="sidebar-a"><img src="assets/icons/side-text.png" id="text-button"></a>
+      <a href="#" title="Erase Tool" class="sidebar-a"><img src="assets/icons/side-erase.png" id="erase-button"></a>
+    </div>
+
+
+
+
+    <!-- Color bar -->
+    <button id="colorshow" title="Current Color"></button>
+
+    <div class="colorcolumn">
+      <!-- column 1 -->
+      <button id="black" class="colorsquare"></button>
+      <button id="white" class="colorsquare"></button>
+      <button id="red" class="colorsquare"></button>
+      <button id="green" class="colorsquare"></button>
+      <button id="blue" class="colorsquare"></button>
+      <button id="purple" class="colorsquare"></button>
+      <button id="yellow" class="colorsquare"></button>
+      <button id="lightblue" class="colorsquare"></button>
+      <button id="orange" class="colorsquare"></button>
+      <button id="brown" class="colorsquare"></button>
+      <button id="fuscia" class="colorsquare"></button>
+      <button id="grey" class="colorsquare"></button>
+      <button id="pink" class="colorsquare"></button>
+      <!-- column 2 -->
+      <button id="black2" class="colorsquare"></button>
+      <button id="white2" class="colorsquare"></button>
+      <button id="red2" class="colorsquare"></button>
+      <button id="green2" class="colorsquare"></button>
+      <button id="blue2" class="colorsquare"></button>
+      <button id="purple2" class="colorsquare"></button>
+      <button id="yellow2" class="colorsquare"></button>
+      <button id="lightblue2" class="colorsquare"></button>
+      <button id="orange2" class="colorsquare"></button>
+      <button id="brown2" class="colorsquare"></button>
+      <button id="fuscia2" class="colorsquare"></button>
+      <button id="grey2" class="colorsquare"></button>
+      <button id="pink2" class="colorsquare"></button>
+
+      <!-- column 3 -->
+      <button id="black3" class="colorsquare"></button>
+      <button id="white3" class="colorsquare"></button>
+      <button id="red3" class="colorsquare"></button>
+      <button id="green3" class="colorsquare"></button>
+      <button id="blue3" class="colorsquare"></button>
+      <button id="purple3" class="colorsquare"></button>
+      <button id="yellow3" class="colorsquare"></button>
+      <button id="lightblue3" class="colorsquare"></button>
+      <button id="orange3" class="colorsquare"></button>
+      <button id="brown3" class="colorsquare"></button>
+      <button id="fuscia3" class="colorsquare"></button>
+      <button id="grey3" class="colorsquare"></button>
+      <button id="pink3" class="colorsquare"></button>
+
+
+    </div>
+  </div>
+  </div>
+
+
+
+
+  <!-- Bottom navigation bar -->
+  <div class="bottom-nav">
+    <div class="stroke-size-panel">
+      <a href="#"><img src="assets/icons/bottom-thickness1px.png" id="thick1"></a>
+      <a href="#"><img src="assets/icons/bottom-thickness2px.png" id="thick2"></a>
+      <a href="#"><img src="assets/icons/bottom-thickness4px.png" id="thick4"></a>
+      <a href="#"><img src="assets/icons/bottom-thickness6px.png" id="thick6"></a>
+      <a href="#"><img src="assets/icons/bottom-thickness8px.png" id="thick8"></a>
+    </div>
+
+    <div class="stamp-panel">
+      <a href="#"><img src="assets/stamps/stamp-bubblebobble.png" id="bubble"></a>
+      <a href="#"><img src="assets/stamps/stamp-mario.png" id="mario"></a>
+      <a href="#"><img src="assets/stamps/stamp-money.png" id="money"></a>
+      <a href="#"><img src="assets/stamps/stamp-megaman.png" id="megaman"></a>
+      <a href="#"><img src="assets/stamps/stamp-streetfighter.png" id="streetfigther"></a>
+      <a href="#"><img src="assets/stamps/stamp-tamagotchi.png" id="tamagotchi"></a>
+      <a href="#"><img src="assets/stamps/stamp-furby.png" id="furby"></a>
+
+    </div>
+  </div>
+
+  <div class="instruction-panel">
+    <img src="assets/instructions-panel.png" alt="instruction">
+    <p id="pencil-inst">Select color and thickness then drag on canvas to begin drawing</p>
+    <p id="paint-inst">Select color and thickness then drag on canvas to begin painting</p>
+    <p id="spray-inst">Select color and thickness then drag on canvas to begin spraying</p>
+    <p id="straight-inst">Select color and thickness then drag on canvas to draw straight line</p>
+    <p id="quad-inst">First select color, thickness and drag on canvas to draw. Click on line and drag again to adjust
+      curve</p>
+    <p id="rect-inst">Select color and then drag on canvas to draw rectangle</p>
+    <p id="circle-inst">Select color and then drag on canvas to circle</p>
+    <p id="oval-inst">Select color and then drag on canvas to draw oval</p>
+    <p id="triangle-inst">Select color and then drag on canvas to draw triangle</p>
+    <p id="stamp-inst">Select stamp mould in bottom stamp menu and click on canvas to print</p>
+    <p id="text-inst">Select color and then drag to type text. Change box height to adjust font size. Press enter to
+      print on page</p>
+    <p id="eraser-inst">Select thickness and then drag on canvas to erase</p>
+  </div>
+
+
+
+
+
+
+
+  <div id="canvas-container">
+    <textarea id="textinput"></textarea>
+    <canvas id="canvas-real" class="canvas" width="1200px" height="480px"></canvas>
+    <canvas id="canvas-draft" class="canvas" width='1200px' height='480px'></canvas>
+  </div>
+  <script type="text/javascript">
+
+  </script>
+
+
+  <script type="text/javascript" src="./Features/scripts/main.js"></script>
+  <script type="text/javascript" src="./Features/color_buttons.js"></script>
+  <!-- javascript for appearance above -->
+  <script type="text/javascript" src="./common.js"></script>
+  <!-- javascript for features below -->
+  <script type="text/javascript" src="./Features/brushloose.js"></script>
+  <script type="text/javascript" src="./Features/circle.js"></script>
+  <script type="text/javascript" src="./Features/clear.js"></script>
+  <script type="text/javascript" src="./Features/color_buttons.js"></script>
+  <script type="text/javascript" src="./Features/ellipse.js"></script>
+  <script type="text/javascript" src="./Features/eraser.js"></script>
+  <script type="text/javascript" src="./Features/line.js"></script>
+  <script type="text/javascript" src="./Features/paint.js"></script>
+  <script type="text/javascript" src="./Features/quadratic.js"></script>
+  <script type="text/javascript" src="./Features/rectangle.js"></script>
+  <script type="text/javascript" src="./Features/stamp.js"></script>
+  <script type="text/javascript" src="./Features/straightline.js"></script>
+  <script type="text/javascript" src="./Features/textbox.js"></script>
+  <script type="text/javascript" src="./Features/triangle.js"></script>
+  <script type="text/javascript" src="./Features/undo_redo.js"></script>
+  <script type="text/javascript" src="./Features/crop.js"></script>
+  <script type="text/javascript" src="./Features/thickness.js"></script>
+  <script type="text/javascript" src="./Features/crop.js"></script>
+  <script type="text/javascript" src="./Features/save.js"></script>
+  <script type="text/javascript">
+    $("#rectangle-button, #circle-button, #oval-button, #text-button, #triangle-button").on("click", function (e) {
+      $('.stroke-size-panel').hide();
+      $('.stamp-panel').hide();
+    })
+  </script>
+</body>
+
+</html>
