@@ -1,10 +1,10 @@
-##The CanvasPix project is a 90s themed drawing application where users can create shapes, lines, stamps and type text.
+The CanvasPix project is a 90s themed drawing application where users can create shapes, lines, stamps and type text.
 
 The project can be viewed here: http://canvaspix.surge.sh/
 
 **Please read the instructions at the bottom before drawing**
 
-__How to use this Application:__
+How to use this Application:
 
 - Clone the github repository to your local machine
 - Open the application in Visual Code
