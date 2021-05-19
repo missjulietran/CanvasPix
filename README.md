@@ -2,9 +2,9 @@ The CanvasPix project is a 90s themed drawing application where users can create
 
 The project can be viewed here: http://canvaspix.surge.sh/
 
-*Please read the instructions at the bottom before drawing*
+**Please read the instructions at the bottom before drawing**
 
-How to use this Application:
+__How to use this Application:__
 
 - Clone the github repository to your local machine
 - Open the application in Visual Code
